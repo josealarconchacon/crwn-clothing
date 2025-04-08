@@ -4,9 +4,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
-  background-color: #f8f8f8;
 
-  // First row: 3 equal width items
   .category-container:nth-child(1) {
     grid-column: span 2;
   }
@@ -17,7 +15,6 @@
     grid-column: span 2;
   }
 
-  // Second row: 2 equal width items
   .category-container:nth-child(4) {
     grid-column: span 3;
   }
@@ -26,7 +23,6 @@
   }
 }
 
-// Large screens (above 1200px)
 @media screen and (min-width: 1201px) {
   .categories-menu-container {
     max-width: 1400px;
@@ -34,7 +30,6 @@
   }
 }
 
-// Medium-large screens (992px - 1200px)
 @media screen and (max-width: 1200px) {
   .categories-menu-container {
     padding: 15px;
@@ -42,24 +37,20 @@
   }
 }
 
-// Tablets and smaller laptops (768px - 991px)
 @media screen and (max-width: 991px) {
   .categories-menu-container {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 
-    // First row: 2 items
     .category-container:nth-child(1) {
       grid-column: span 2;
     }
     .category-container:nth-child(2) {
       grid-column: span 2;
     }
-    // Second row: 1 item full width
     .category-container:nth-child(3) {
       grid-column: 1 / -1;
     }
-    // Third row: 2 items
     .category-container:nth-child(4) {
       grid-column: span 2;
     }
@@ -69,33 +60,28 @@
   }
 }
 
-// Tablets (576px - 767px)
 @media screen and (max-width: 767px) {
   .categories-menu-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 12px;
 
-    // Reset all grid columns
     .category-container:nth-child(n) {
       grid-column: span 1;
     }
 
-    // Make third item full width
     .category-container:nth-child(3) {
       grid-column: 1 / -1;
     }
   }
 }
 
-// Mobile phones (575px and below)
 @media screen and (max-width: 575px) {
   .categories-menu-container {
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 10px;
 
-    // All items take full width
     .category-container:nth-child(n) {
       grid-column: 1 / -1;
     }
